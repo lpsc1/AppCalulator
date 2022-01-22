@@ -12,10 +12,12 @@ export function ButtonTheme({colorMode, toggleColorMode}: ButtonThemeProps) {
         <ChakraButton 
         onClick={toggleColorMode}
         variant='ghost'
+        _hover={{bg:colorMode === 'light' ? 'white' : 'gray.800'}}
         > 
         <Icon 
         color={colorMode === 'light' ? 'gray.800' : 'gray.200' } 
         fontSize="2.5rem"  
+        _hover={{bg:colorMode === 'light' ? 'white' : 'gray.800', color:colorMode === 'light' ? 'cyan.300' : 'gray.400'}}
         as={colorMode === 'light' ? RiSunLine : RiMoonLine }/> 
 
          </ChakraButton>

@@ -13,7 +13,8 @@ export function Window({value}: WindowProps) {
     return (
     
 
-      <Text>{value}</Text>
+      <Text>{value.length > 14 ? Number(value).toPrecision(4) : value }</Text>
+    
 
       
     );
